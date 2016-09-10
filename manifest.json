@@ -1,0 +1,27 @@
+{
+  "name": "Un-Original",
+  "description": "Removes the massive pane of Netflix Originals from the top of the Netflix browse page.",
+  "version": "1.2",
+  "browser_action": {
+  "default_icon": "icon.png"
+},
+
+  "icons": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png" },
+
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "content_scripts": [
+      {
+        "matches": ["http://www.netflix.com/*","https://www.netflix.com/browse*"],
+        "run_at": "document_start",
+        "js": ["background.js"],
+        "all_frames": true
+      }
+    ],
+  "manifest_version": 2
+}
