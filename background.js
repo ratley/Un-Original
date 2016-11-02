@@ -1,5 +1,8 @@
 var element = function() {
-    document.getElementsByClassName("lolomoRow lolomoRow_title_card originals-panels-row lolomo-row-above-nav")[0].style.display = "none";
+  originalsPane = $('.originals-panels-row')
+  if(originalsPane != null) {
+    originalsPane.hide()
+  }
 };
 
 setInterval(element, 1000);
